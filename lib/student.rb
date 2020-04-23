@@ -26,6 +26,13 @@ attr_reader :id
     DB[:conn].execute(drop)
 end
 
+def self.drop_table
+sql = <<-SQL
+Drop Table IF Exists students
+SQL
+DB[:conn].execute(sql)
+end
+end
 
 def save 
   sql = <<-SQL   
