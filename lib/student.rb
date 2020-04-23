@@ -32,7 +32,7 @@ Drop Table IF Exists students
 SQL
 DB[:conn].execute(sql)
 end
-end
+
 
 def save 
   sql = <<-SQL   
@@ -49,6 +49,4 @@ end
    student.save
    student
  end
- 
- 
 end
